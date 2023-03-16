@@ -41,7 +41,7 @@ public class GameController {
     try 
     {
       Game game = gameService.getGame(gameId);
-      if (game.getCurrentGuesses() < 6) 
+      if (game.getCurrentGuesses() < game.getMaxGuesses()) 
       {
     	  game = gameService.makeGuess(gameId, guess);
       }
